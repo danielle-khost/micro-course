@@ -36,6 +36,8 @@ So to print the fifth column of each line in the file, we'd use:
 And if we wanted to print the first, third, and sixth:
 
 `awk '{print $1,$3,$6}'`
+
+Note that the different fields are joined with commas when printing.
 <br/>
 <br/>
 
@@ -44,9 +46,12 @@ awk has several other built-in variables that are useful for parsing text:
 >FS: field separator (default: white space)<br/>
 OFS: output field separator, i.e. what character separates fields when printing<br/>
 RS: record separator, i.e. what character records are split on (default: new line)<br/>
+ORS: output record separator<br/>
 NR: number of records in input (# lines by default)
 
----
+Using these, we can convert between file formats, e.g. make a comma-separated text file into a tab-separated file:
+
+`awk 'BEGIN{FS="," ; OFS="\t"} {print $0}'`
 ### Practice
 Using awk:<br/>
 - Write a command to calculate that average of the third column of a tab-separated list and output it.
