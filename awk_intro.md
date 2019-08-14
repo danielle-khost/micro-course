@@ -52,10 +52,25 @@ NR: number of records in input (# lines by default)
 Using these, we can convert between file formats, e.g. make a comma-separated text file into a tab-separated file:
 
 `awk 'BEGIN{FS="," ; OFS="\t"} {print $0}'`
+
+We can also print strings using using quotation marks:
+
+`awk '{print "First column:"$1}'`
+
+### Logic
+using conditionals, regex (briefly)
+
 ### Practice
 Using awk:<br/>
 - Write a command to calculate that average of the third column of a tab-separated list and output it.
+- Subset a file to only include lines between certain coordinates
 
 
 ### Advanced examples
 While awk is good for simple text parsing tasks, you can get quite fancy with it!
+
+Pass shell variables to awk:
+
+Extract FASTA info from SAM file:
+
+Split strings to arrays
