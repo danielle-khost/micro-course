@@ -64,6 +64,7 @@ using conditionals, regex (briefly)
 Using awk:<br/>
 - Write a command to calculate that average of the third column of a tab-separated list and output it.
 - Subset a file to only include lines between certain coordinates
+- Extract FASTA information from a SAM file
 
 
 ### Advanced examples
